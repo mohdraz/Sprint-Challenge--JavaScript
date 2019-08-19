@@ -78,9 +78,12 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-graduates.forEach(university => {
-  universities.push(university['university']);
-})
+// graduates.forEach(university => {
+//   universities.push(university['university']);
+// })
+
+// stretch
+graduates.forEach(university => universities.push(university['university']));
 
 universities.sort();
 console.log(universities)
@@ -93,9 +96,12 @@ Name email@example.com
 Log the result of your new array. */
 // const contactInfo = [];
 
-const contactInfo = graduates.map((contact) => {
-    return `${contact['first_name']}  ${contact['email']}`;
-});
+// const contactInfo = graduates.map((contact) => {
+//     return `${contact['first_name']}  ${contact['email']}`;
+// });
+
+// stretch
+const contactInfo = graduates.map((contact) => `${contact['first_name']}  ${contact['email']}`);
 
 console.log(contactInfo);
 
@@ -103,9 +109,14 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 // const uni = [];
 
-const uni = graduates.filter( (univ => {
-  return univ['university'].includes('Uni');
-}));
+// const uni = graduates.filter( (univ => {
+//   return univ['university'].includes('Uni');
+// }));
+
+// stretch
+
+const uni = graduates.filter( (univ => univ['university'].includes('Uni')));
+
 console.log(uni);
 
 
@@ -146,9 +157,13 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 // const lowerCase = [];
 
-const lowerCase = zooAnimals.map(name => {
-  return  name.animal_name.toLowerCase();
-});
+// const lowerCase = zooAnimals.map(name => {
+//   return  name.animal_name.toLowerCase();
+// });
+
+// stretch
+
+const lowerCase = zooAnimals.map(name => name.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -158,9 +173,14 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 // const lowerPopulation = [];
 
-const lowerPopulation = zooAnimals.filter(pop => {
-  return pop.population < 5;
-});
+// const lowerPopulation = zooAnimals.filter(pop => {
+//   return pop.population < 5;
+// });
+
+// stretch
+
+const lowerPopulation = zooAnimals.filter(pop => pop.population < 5);
+
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 

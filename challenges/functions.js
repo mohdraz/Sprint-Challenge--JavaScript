@@ -28,7 +28,6 @@ function consume(para1, para2, callback) {
    return `Hello ${first} ${last}, nice to meet you`;
  }
 
-//  console.log(consume(8, 2, add));
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
@@ -44,9 +43,9 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 /*
 
-The nested can access the variable 'internal' due to the javascript closure functionality. that allows scope of within a function to access variable outside of the scope of the function outer scope
+The nested function can access the variable 'internal' due to the javascript closure functionality. that allows scope of within a function to access variable outside of the scope of the function outer scope
 
-the internal variable is define outside of the nested function. therefore, it is avaialbe to be used in the nested function without it being defined agian in the nested function
+the internal variable is defined outside of the nested function. therefore, it is avaialbe to be used in the nested function without it being defined again in the nested function
 
 */
 
